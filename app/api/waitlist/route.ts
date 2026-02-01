@@ -40,16 +40,18 @@ export async function POST(req: Request) {
     });
 
     if (error) {
+      console.error("Resend error:", error);
       return NextResponse.json(
-        { success: false, error: error.message },
+        { success: false, error: `Email error: ${error.message}` },
         { status: 500 }
       );
     }
 
     return NextResponse.json({ success: true });
-  } catch {
+  } catch (err) {
+    console.error("Server error:", err);
     return NextResponse.json(
-      { success: false, error: "Server error" },
+      { success: false, error: err instanceof Error ? err.message : "Server error" },
       { status: 500 }
     );
   }
