@@ -112,9 +112,6 @@ export default function StackOptimizerLanding() {
               <a href="#features" className="text-sm transition-colors hover:text-foreground text-muted-foreground">
                 Features
               </a>
-              <a href="#pricing" className="text-sm transition-colors hover:text-foreground text-muted-foreground">
-                Pricing
-              </a>
               <a href="#testimonials" className="text-sm transition-colors hover:text-foreground text-muted-foreground">
                 Testimonials
               </a>
@@ -245,110 +242,6 @@ export default function StackOptimizerLanding() {
                 <p className="text-muted-foreground">
                   Connect all your tools in minutes with our extensive integration library.
                 </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="border-b border-border/50 py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="mb-16 text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Simple, transparent pricing
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Start free, scale as you grow
-            </p>
-          </div>
-          <div className="grid gap-8 md:grid-cols-3">
-            <Card>
-              <CardContent className="p-8">
-                <h3 className="text-xl font-semibold">Starter</h3>
-                <div className="mt-4 flex items-baseline gap-1">
-                  <span className="text-4xl font-bold">$0</span>
-                  <span className="text-muted-foreground">/month</span>
-                </div>
-                <ul className="mt-6 space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-green-500 mt-0.5" />
-                    <span className="text-sm">Up to 5 tools</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-green-500 mt-0.5" />
-                    <span className="text-sm">Basic analytics</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-green-500 mt-0.5" />
-                    <span className="text-sm">Email support</span>
-                  </li>
-                </ul>
-                <Button variant="outline" className="mt-8 w-full">
-                  Get Started
-                </Button>
-              </CardContent>
-            </Card>
-            <Card className="border-2 border-primary">
-              <CardContent className="p-8">
-                <div className="mb-2 inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
-                  Popular
-                </div>
-                <h3 className="text-xl font-semibold">Professional</h3>
-                <div className="mt-4 flex items-baseline gap-1">
-                  <span className="text-4xl font-bold">$29</span>
-                  <span className="text-muted-foreground">/month</span>
-                </div>
-                <ul className="mt-6 space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-green-500 mt-0.5" />
-                    <span className="text-sm">Unlimited tools</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-green-500 mt-0.5" />
-                    <span className="text-sm">Advanced analytics</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-green-500 mt-0.5" />
-                    <span className="text-sm">AI recommendations</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-green-500 mt-0.5" />
-                    <span className="text-sm">Priority support</span>
-                  </li>
-                </ul>
-                <Button className="mt-8 w-full">
-                  Get Started
-                </Button>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-8">
-                <h3 className="text-xl font-semibold">Enterprise</h3>
-                <div className="mt-4 flex items-baseline gap-1">
-                  <span className="text-4xl font-bold">Custom</span>
-                </div>
-                <ul className="mt-6 space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-green-500 mt-0.5" />
-                    <span className="text-sm">Everything in Pro</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-green-500 mt-0.5" />
-                    <span className="text-sm">Custom integrations</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-green-500 mt-0.5" />
-                    <span className="text-sm">Dedicated support</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-green-500 mt-0.5" />
-                    <span className="text-sm">SLA guarantee</span>
-                  </li>
-                </ul>
-                <Button variant="outline" className="mt-8 w-full">
-                  Contact Sales
-                </Button>
               </CardContent>
             </Card>
           </div>
