@@ -11,11 +11,32 @@ export function WaitlistForm() {
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (email && name) {
-      setSubmitted(true)
+    setLoading(true)
+    setError("")
+
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email }),
+      })
+
+      const data = await res.json()
+
+      if (res.ok && data.success) {
+        setSubmitted(true)
+      } else {
+        setError(data.error || "Something went wrong. Please try again.")
+      }
+    } catch {
+      setError("Network error. Please try again.")
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -43,6 +64,7 @@ export function WaitlistForm() {
         value={name}
         onChange={(e) => setName(e.target.value)}
         required
+        disabled={loading}
         className="h-12 bg-background border-border"
       />
       <Input
@@ -51,14 +73,19 @@ export function WaitlistForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
+        disabled={loading}
         className="h-12 bg-background border-border"
       />
+      {error && (
+        <p className="text-sm text-red-500">{error}</p>
+      )}
       <Button 
         type="submit" 
         size="lg" 
+        disabled={loading}
         className="w-full h-12 bg-primary text-primary-foreground hover:bg-primary/90"
       >
-        Get Early Access
+        {loading ? "Joining..." : "Get Early Access"}
       </Button>
       <p className="text-xs text-muted-foreground">
         We respect your inbox - no spam, ever.
